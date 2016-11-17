@@ -1,0 +1,46 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-material/paper-material.html">
+<dom-module id="my-card">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      paper-material{
+          background: white;
+          margin-left: 10px;
+          width: 300px;
+          height: 200px;
+          margin-bottom: 10px;
+      }
+      paper-material:hover{
+          background: gray;
+          cursor: pointer;
+      }
+    </style>
+
+    <paper-material id="card" elevation="2">
+
+      [[title]]
+    </paper-material>
+
+  </template>
+
+  <script>
+    Polymer({
+      is: 'my-card',
+
+      properties: {
+          title: {
+              type: String,
+              value: "title"
+          }
+      },
+
+      observers: [
+
+      ],
+
+    });
+  </script>
+</dom-module>

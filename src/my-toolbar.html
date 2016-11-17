@@ -1,0 +1,42 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="my-toolbar">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      #toolbar{
+          display: flex;
+          height: 80px;
+          background: #555555;
+      }
+      .logo{
+          font-size: 2em;
+          color: white;
+      }
+    </style>
+
+    <div id="toolbar">
+        <div class="logo">
+            Ravazzini & bondioli Srl
+        </div>
+    </div>
+
+  </template>
+
+  <script>
+    Polymer({
+      is: 'my-toolbar',
+
+      properties: {
+
+      },
+
+      observers: [
+
+      ],
+
+    });
+  </script>
+</dom-module>
