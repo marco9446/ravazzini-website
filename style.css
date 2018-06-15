@@ -1,0 +1,130 @@
+
+/* banner */
+#banner{
+    position: relative;
+    background-attachment: fixed; 
+    background-color: #494d53; 
+    background-image:  url("./images/parquet.jpg");
+    background-position:  center; 
+    background-repeat:  no-repeat; 
+    background-size:  cover; 
+    color:#d1d2d4; 
+    padding: 13em 0; 
+    text-align: center;
+}
+
+#banner :last-child { margin-bottom:0; } 
+#banner h1, #banner h2, #banner h3, 
+#banner h4, #banner h5, #banner h6 { color:white; } 
+#banner h2 { font-size: 3.25em; line-height: 1.25em; margin: 0 0 0.5em 0; padding: 0; } 
+#banner p { font-size: 1.5em; margin-bottom:1.75em; color: #e9f0ff}
+
+/* section */
+section{
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom:10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding:4em;
+}
+section>.container{
+    width: 100%;
+    max-width: 1000px;
+}
+
+.container>h2{
+    text-align: center;
+}
+
+
+
+/* section1 */
+
+
+/* section2 */
+#two{
+    color: white;
+    background-image:linear-gradient(
+      rgba(0, 0, 0, 0.0),
+      rgba(0, 0, 0, 0.0)
+    ), url("./images/floor.jpg");
+    background-position: top left, center center; 
+    background-repeat: repeat, no-repeat; 
+    background-size: auto, cover; 
+    background-attachment: scroll, fixed; 
+    text-shadow: 0px 0px 3px #000;
+}
+.container-sub{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+
+}
+
+#two .container-sub a{
+    color: white;
+    /* text-shadow: 0px 0px 3px #fff; */
+}
+#two .container-sub .left{
+    width: 500px;
+}
+
+#two .container-sub .right{
+    padding: 2px;
+    height: 173px;
+    background: rgba(0, 0, 0, 0.363);
+    margin-top: 20px;
+}
+
+
+
+/* section3 */
+#three .right{
+    max-width: 260px;
+}
+#three .right>img{
+    width: 100%;
+}
+
+/* footer */
+footer{
+    padding: 0 1em;
+    text-align: right;
+    /* background: #f2f2f2; */
+}
+footer>a{
+    color: #e0555a;
+    text-decoration: none;
+    border-bottom: dotted 1px;
+}
+
+@media only screen and (max-width : 700px) {
+    section{
+        padding: 2em;
+        /* flex-direction: column; */
+    }
+    #three .container-sub .right{
+        margin-top: 60px;
+    }
+
+}
+
+
+@media only screen and (max-width : 450px) {
+    section{
+        font-size: 0.9em;
+        padding: 1em;
+        /* flex-direction: column; */
+    }
+    footer{
+        font-size: 0.6em;
+    }
+}
+
+@media only screen and (max-width : 513px) {
+    #two .container-sub .right{
+          font-size: 0.8em;
+    }
+}

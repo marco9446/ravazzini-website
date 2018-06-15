@@ -1,112 +1,136 @@
-<!--
-@license
-Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="generator" content="Polymer Starter Kit">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>My App</title>
-    <meta name="description" content="My App description">
+    <title>Ravazzini & Bondioli</title>
+    <meta name="description" content="Ravazzini & Bondioli website">
 
-    <link rel="icon" href="/images/favicon.ico">
+    <base href="/">
 
-    <!-- See https://goo.gl/OOhYW5 -->
-    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="images/favicon.ico">
+
 
     <!-- See https://goo.gl/qRE0vM -->
     <meta name="theme-color" content="#3f51b5">
 
-    <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="My App">
-
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="My App">
-
-    <!-- Homescreen icons -->
-    <link rel="apple-touch-icon" href="/images/manifest/icon-48x48.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/manifest/icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="96x96" href="/images/manifest/icon-96x96.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/images/manifest/icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="192x192" href="/images/manifest/icon-192x192.png">
-
-    <!-- Tile icon for Windows 8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="/images/manifest/icon-144x144.png">
-    <meta name="msapplication-TileColor" content="#3f51b5">
-    <meta name="msapplication-tap-highlight" content="no">
-
-    <script>
-      // Setup Polymer options
-      window.Polymer = {
-        dom: 'shadow',
-        lazyRegister: true
-      };
-
-      // Load webcomponentsjs polyfill if browser does not support native Web Components
-      (function() {
-        'use strict';
-
-        var onload = function() {
-          // For native Imports, manually fire WebComponentsReady so user code
-          // can use the same code path for native and polyfill'd imports.
-          if (!window.HTMLImports) {
-            document.dispatchEvent(
-              new CustomEvent('WebComponentsReady', {bubbles: true})
-            );
-          }
-        };
-
-        var webComponentsSupported = (
-          'registerElement' in document
-          && 'import' in document.createElement('link')
-          && 'content' in document.createElement('template')
-        );
-
-        if (!webComponentsSupported) {
-          var script = document.createElement('script');
-          script.async = true;
-          script.src = '/bower_components/webcomponentsjs/webcomponents-lite.min.js';
-          script.onload = onload;
-          document.head.appendChild(script);
-        } else {
-          onload();
-        }
-      })();
-
-      // Load pre-caching Service Worker
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/service-worker.js');
-        });
-      }
-    </script>
-
-    <link rel="import" href="/src/my-app.html">
-
+  <link rel="stylesheet" type="text/css" href="style.css" media="none" onload="if(media!='all')media='all'"/>
     <style>
-      body {
-        width: 100%;
-        margin: 0;
-        font-family: 'Roboto', 'Noto', sans-serif;
-        line-height: 1.5;
-        min-height: 100vh;
-        background-color: #f8f8f8;
+      body, input, select, textarea {
+          color: #646464;
+          font-family: "Lato", Helvetica, sans-serif;
+          font-size: 15pt;
+          font-weight: 300;
+          line-height: 1.75em;
+          margin: 0;
+      }
+
+      section{
+          position: relative;
+          box-sizing: border-box;
+          margin-bottom:10px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+      }
+
+      #banner{
+            background-color: #494d53; 
       }
     </style>
   </head>
+
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-73940237-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-73940237-2');
+  </script>
+
   <body>
-    <my-app></my-app>
-    <!-- Built with love using Polymer Starter Kit -->
+    
+
+
+      
+      <!-- Banner -->
+      <section id="banner">
+        <div class="inner">
+          <h2>Ravazzini & Bondioli</h2>
+          <p>Vendita e posa pavimenti e rivestimenti</p>
+        </div>
+      </section>
+      
+      <!-- One -->
+      <section id="one" >
+        <div class="container">
+            <h2>Prodotti e servizi</h2>
+            <ul>
+              <li>Vendita e accurata posa in opera di pavimenti e rivestimenti in ceramica, grès, parquet, laminati, cotto, klinker, marmo
+              e mosaico</li>
+              <li>Materiali per bio-eco edilizia</li>
+              <li>Rivestimenti e bordi piscine</li>
+              <li>Pietra naturale e ricostruita</li>
+            </ul>
+        </div>
+      </section>
+
+
+      <!-- Two -->
+      <section id="two" >
+  
+        <div class="container">
+            <h2>Mappa e orari</h2>
+            <div class="container-sub">
+              <div class="left">
+                <iframe 
+                  title="shop location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2779.7316439995725!2d8.907819815765821!3d45.83665461653409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47868196bdf5cdff%3A0x4482ad8e1a0e4d7e!2sRavazzini+e+Bondioli+Srl!5e0!3m2!1sen!2sit!4v1528906174360"
+                  width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="right">
+                <div class="address">
+                    <a href="https://www.google.it/maps/place/Ravazzini+e+Bondioli+Srl/@45.836677,8.910065,17z/data=!3m1!4b1!4m2!3m1!1s0x47868196bdf5cdff:0x4482ad8e1a0e4d7e">
+                      Via Lugano 6 - 21050 Gaggiolo di Cantello (VA)</a>
+                </div>
+                <div class="timetable">Orari di apertura: </div>
+                <div class="timetable opening">Mattino: 8:30-12:00</div>
+                <div class="timetable opening">Pomeriggio: 14:30-18:30</div>
+                <div class="timetable">Lunedì mattina e sabato pomeriggio chiuso</div>
+              </div>
+            </div>
+            
+        </div>
+      </section>
+
+
+      <!-- three -->
+      <section id="three" >
+        <div class="container">
+          <h2>Contatti</h2>
+          <div class="container-sub">
+
+            <div class="left">
+              <div> E-mail:
+                <a href="mailto:ravazziniebondioli@gmail.com">ravazziniebondioli@gmail.com</a>
+              </div>
+              <div>Telefono: <a href="tel:+39 0332 417746">+39 0332 417746</a></div>
+              <div>Telefono: <a href="tel:+39 0332 414240">+39 0332 414240</a></div>
+            </div>
+            <div class="right">
+              <img src="../images/ravaziznibondioliCOLOR.png" alt="" />
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <footer>
+        designed by: <a href="https://marcoravazzini.firebaseapp.com/">Marco Ravazzini</a>
+      </footer>
   </body>
 </html>
